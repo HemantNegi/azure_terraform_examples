@@ -1,4 +1,12 @@
 # Create a storage account and store a file in it.
+## Similar can be done with az like below
+//# Resource Group
+//$ az group create --name tf-rg --location westeurope
+//# Storage Account
+//$ az storage account create -n tfstatestac -g tf-rg --sku Standard_LRS
+//# Storage Account Container
+//$ az storage co
+
 provider "azurerm" {
   version  = "~> 2.3"
   features = {}

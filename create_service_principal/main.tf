@@ -152,3 +152,14 @@ resource "azurerm_role_assignment" "subscription_acces" {
 //  principal_id       = "${azuread_service_principal.sp.id}"
 //}
 
+//# Sometimes Azure returns a 200, but not all services have access to the newly created applications/services.
+//resource "null_resource" "delay_before_consent" {
+//  provisioner "local-exec" {
+//    command = "sleep 60"
+//  }
+//  depends_on = [
+//    azuread_service_principal.aks-aad-srv,
+//    azuread_service_principal.aks-aad-client
+//  ]
+//}
+//
